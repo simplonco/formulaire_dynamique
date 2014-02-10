@@ -1,0 +1,12 @@
+<h1>Créer une annonce</h1>
+
+<%= form_tag("/search", method: "get") do %>
+	
+  <%= label_tag(:titre, "Titre de l'annonce:") %>
+  <%= text_field_tag(:titre) %></br>
+
+  <%= label_tag(:question, "Saisir votre question:") %>
+  <%= text_field_tag(:question) %></br>
+  
+  <%= submit_tag("Valider") %>
+<% end %>
