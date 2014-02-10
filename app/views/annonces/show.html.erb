@@ -1,2 +1,21 @@
-<h1>Annonce#show</h1>
-<p>Find me in app/views/annonce/show.html.erb</p>
+<h1>Annonce <%=@annonce.id%></h1>
+
+<%= @annonce.titre %></br>
+<%= @annonce.question %>
+
+<h2>Répondez</h2>
+
+<%= form_for([@annonce, @annonce.reponses.build]) do |a| %>
+ 
+  <p>
+    <%= a.label "Votre réponse" %><br/>
+    <%= a.text_area :texte_reponse %>
+  </p>
+
+  <p>
+    <%= a.submit "Envoyez"%>
+  </p>
+  
+<% end %>
+
+

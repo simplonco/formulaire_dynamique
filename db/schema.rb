@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140210114902) do
+ActiveRecord::Schema.define(version: 20140210150821) do
 
   create_table "annonces", force: true do |t|
     t.string   "titre"
@@ -19,5 +19,14 @@ ActiveRecord::Schema.define(version: 20140210114902) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "reponses", force: true do |t|
+    t.text     "texte_reponse"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "annonce_id"
+  end
+
+  add_index "reponses", ["annonce_id"], name: "index_reponses_on_annonce_id"
 
 end

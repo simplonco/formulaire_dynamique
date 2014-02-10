@@ -8,7 +8,8 @@ class AnnoncesController < ApplicationController
   	redirect_to action: :index
   end
 
-  def show 
+  def show
+  	@annonce = Annonce.find(params[:id])
   end
 
   def index
