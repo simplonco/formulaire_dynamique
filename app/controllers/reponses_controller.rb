@@ -11,13 +11,11 @@ class ReponsesController < ApplicationController
 	end
 
 	def show
+		@annonce = Annonce.find(params[:annonce_id])
 	end
 
 	def index
-	end
-
-	def annonce_id
-
+		@annonce = Annonce.find(params[:annonce_id])
 	end
 
 end

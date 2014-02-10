@@ -3,7 +3,7 @@
 <%= @annonce.titre %></br>
 <%= @annonce.question %>
 
-<h2>Répondez</h2>
+<h3>Répondez</h3>
 
 <%= form_for([@annonce, @annonce.reponses.build]) do |a| %>
  
@@ -17,5 +17,7 @@
   </p>
   
 <% end %>
+
+<br/><%= link_to "Liste des réponses à cette question", ":annonce_id/reponses" %><br/>
 
 

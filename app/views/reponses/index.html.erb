@@ -1,2 +1,4 @@
-<h1>Reponse#index</h1>
-<p>Find me in app/views/reponse/index.html.erb</p>
+<h1>Liste des réponses à cette question</h1>
+<% @annonce.reponses.each do |a| %>
+	<%= a.texte_reponse %><br/>
+<%end%>
