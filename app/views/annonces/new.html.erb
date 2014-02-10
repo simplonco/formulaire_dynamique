@@ -1,12 +1,13 @@
 <h1>Créer une annonce</h1>
 
-<%= form_tag("/search", method: "get") do %>
+<%= form_for :annonce do |a| %>
 	
-  <%= label_tag(:titre, "Titre de l'annonce:") %>
-  <%= text_field_tag(:titre) %></br>
+  <%= a.label :titre, "Titre de l'annonce:" %>
+  <%= a.text_field :titre %></br>
 
-  <%= label_tag(:question, "Saisir votre question:") %>
-  <%= text_field_tag(:question) %></br>
-  
-  <%= submit_tag("Valider") %>
+  <%= a.label :question, "Saisir votre question:" %>
+  <%= a.text_area :question %></br>
+
+  <%= a.submit "Valider" %>
+
 <% end %>
